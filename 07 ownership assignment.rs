@@ -16,3 +16,28 @@ fn getstring()->String{
 fn send_get_string(s:String)->String{
     return s;  // 6. transferring the ownership back to the caller
 }
+
+
+
+// Example 2
+
+fn main(){
+    let s1:String=String::from("hello");
+    let (s2,len)=calculate_length(s1);
+    println!("The length of '{}' is: {}",s2,len);
+}
+fn calculate_length(s:String) -> (String,usize) {
+    let length= s.len();
+    return (s,length);
+}
+
+/*
+fn main(){
+    let s1:String = String::from("hello");
+    let len:usize = calculate_length(s1);
+    println!("The length of {} is: {}",s1,len);  //this line will cause an error because s1 is moved
+}
+fn calculate_length(s:String) -> usize {
+    s.len()
+}
+*/
