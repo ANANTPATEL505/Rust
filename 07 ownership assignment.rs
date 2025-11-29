@@ -23,7 +23,7 @@ fn send_get_string(s:String)->String{
 
 fn main(){
     let s1:String=String::from("hello");
-    let (s2,len)=calculate_length(s1);
+    let (s2,len)=calculate_length(s1);          // calculate_length(s1.clone()) to avoid moving s1
     println!("The length of '{}' is: {}",s2,len);
 }
 fn calculate_length(s:String) -> (String,usize) {
