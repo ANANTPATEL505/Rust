@@ -2,7 +2,7 @@
 
 // Example 1: Immutable References readonly
 fn main(){
-    let mut s1:String=String::from("hello");
+    let s1:String=String::from("hello");
     let len=calculate_length(&s1); 
     println!("The length of '{}' is {}.",s1,len);
 }
